@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Sistema de Registro Nuevo Ingreso</title>
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+</head>
+
+<body>
+
+<nav>
+
+    <div class="nav-wrapper">
+
+        <a href="index.html" class="brand-logo">&ensp;ESCOM</a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+
+            <li><a href="index.html">Registrarse</a></li>
+            <li><a href="#">Consultar Horario</a></li>
+
+        </ul>
+
+        <ul class="side-nav" id="mobile-demo">
+
+            <li><a href="index.html">Registrarse</a></li>
+            <li><a href="#">Consultar Horario</a></li>
+
+        </ul>
+
+    </div>
+
+</nav>
+
+<div class="container">
+
+    <div class="row">
+
+        <!--Left Fill-->
+        <div class="col xl1"></div>
+
+        <div class="col xl10 s12">
+
+            <h4>Formulario de Registro</h4>
+
+            <form>
+
+                <fieldset>
+
+                    <legend>Información B&aacute;sica</legend>
+
+                    <fieldset>
+
+                        <legend>Referencia</legend>
+
+                        <div class="input-field col s12">
+
+                            <input id="reference" name="reference" type="text">
+                            <label for="reference">Número de Referencia</label>
+
+                        </div>
+
+                    </fieldset>
+
+                    <fieldset>
+
+                        <legend>Nombre</legend>
+
+                        <div class="input-field col s12">
+
+                            <input id="first_name" type="text" name="first_name">
+                            <label for="first_name">Nombre(s)</label>
+
+                        </div>
+
+                        <div class="input-field col s12">
+
+                            <input id="last_name" type="text" name="last_name">
+                            <label for="last_name">Apellido Paterno</label>
+
+                        </div>
+
+                        <div class="input-field col s12">
+
+                            <input id="second_last_name" type="text" name="second_last_name">
+                            <label for="second_last_name">Apellido Materno</label>
+
+                        </div>
+
+                    </fieldset>
+
+                    <fieldset>
+
+                        <legend>Informaci&oacute;n de Nacimiento</legend>
+
+                        <div class="input-field col s12">
+
+                            <input id="birthday" class="datepicker" type="text" name="birthday">
+                            <label for="birthday">Fecha de Nacimiento</label>
+
+                        </div>
+
+                        <div class="input-field col s12">
+
+                            <select id="list_states" name="born_state" size="5">
+
+                                <option value="1" selected>Aguascalientes</option>
+                                <option value="2">Baja California</option>
+                                <option value="3">Baja California Sur</option>
+                                <option value="4">Campeche</option>
+                                <option value="5">Coahuila</option>
+                                <option value="6">Colima</option>
+                                <option value="7">Chiapas</option>
+                                <option value="8">Chihuahua</option>
+                                <option value="9">CDMX</option>
+                                <option value="10">Durango</option>
+                                <option value="11">Guanajuato</option>
+                                <option value="12">Guerrero</option>
+                                <option value="13">Hidalgo</option>
+                                <option value="14">Jalisco</option>
+                                <option value="15">Estado de M&eacute;xico</option>
+                                <option value="16">Michoac&aacute;n</option>
+                                <option value="17">Morelos</option>
+                                <option value="18">Nayarit</option>
+                                <option value="19">Nuevo Le&oacute;n</option>
+                                <option value="20">Oaxaca</option>
+                                <option value="21">Puebla</option>
+                                <option value="22">Quer&eacute;taro</option>
+                                <option value="23">Quintana Roo</option>
+                                <option value="24">San Luis Potos&iacute;</option>
+                                <option value="25">Sinaloa</option>
+                                <option value="26">Sonora</option>
+                                <option value="27">Tabasco</option>
+                                <option value="28">Tamaulipas</option>
+                                <option value="29">Tlaxcala</option>
+                                <option value="30">Veracruz</option>
+                                <option value="31">Yucat&aacute;n</option>
+                                <option value="32">Zacatecas</option>
+
+                            </select>
+
+                            <label>Estado de Nacimiento</label>
+
+                        </div>
+
+                    </fieldset>
+
+                    <fieldset>
+
+                        <legend>Sexo:</legend>
+
+                        <input id="male" name="gender" type="radio" class="with-gap">
+                        <label for="male">Masculino</label>
+
+                        <input id="female" name="gender" type="radio" class="with-gap">
+                        <label for="female">Femenino</label>
+
+                        <input id="other" name="gender" type="radio" class="with-gap">
+                        <label for="other">Otro</label>
+
+                    </fieldset>
+
+                    <fieldset>
+
+                        <legend>CURP:</legend>
+
+                        <div class="input-field col s12">
+
+                            <input name="CURP" type="text" id="CURP">
+                            <label for="CURP">CURP</label>
+
+                        </div>
+
+                    </fieldset>
+                </fieldset>
+
+                <fieldset>
+
+                    <legend>Informaci&oacute;n de Contacto</legend>
+
+                    <fieldset>
+
+                        <legend>Direcci&oacute;n</legend>
+
+                        <div class="input-field col m4 s12">
+
+                            <input name="street" id="street" type="text">
+                            <label for="street">Calle</label>
+
+                        </div>
+
+                        <div class="input-field col m4 s12">
+
+                            <input name="address_number" id="address_number" type="tel">
+                            <label for="address_number">N&uacute;mero</label>
+
+                        </div>
+
+                        <div class="input-field col m4 s12">
+
+                            <input name="CP" id="CP" type="tel">
+                            <label for="CP">C&oacute;digo Postal</label>
+
+                        </div>
+
+                    </fieldset>
+
+                    <fieldset>
+
+                        <legend>Teléfono</legend>
+
+                        <div class="input-field col m6 s12">
+
+                            <input id="phone" name="phone" type="tel">
+                            <label for="phone">Local</label>
+
+                        </div>
+
+                        <div class="input-field col m6 s12">
+
+                            <input id="cellphone" name="cellphone" type="tel">
+                            <label for="cellphone">Celular</label>
+
+                        </div>
+
+                    </fieldset>
+
+                    <fieldset>
+
+                        <legend>Correo</legend>
+
+                        <div class="input-field col s12">
+
+                            <input id="email" name="email" type="email">
+                            <label for="email">Correo Electrónico</label>
+
+                        </div>
+
+                    </fieldset>
+
+                </fieldset>
+
+                <fieldset>
+
+                    <legend>Información Académica</legend>
+
+                    <div class="input-field col xl8 s12">
+
+                        <input id="previous_school" name="previous_school" type="text">
+                        <label for="previous_school">Escuela de Procedencia</label>
+
+                    </div>
+
+                    <div class="input-field col m4 s12">
+
+                        <input id="average" name="average" type="number" min="5" max="10" step="0.01">
+                        <label for="average">Promedio</label>
+
+                    </div>
+
+                </fieldset>
+
+                <fieldset>
+
+                    <legend>Opción</legend>
+
+                    <div class="input-field col s12">
+
+                        <select id="option" name="option" size="10">
+
+                            <option value="" selected>Seleccionar Carrera</option>
+                            <option value="ING. EN SISTEMAS COMPUTACIONALES (ESCOM)">ING. EN SISTEMAS COMPUTACIONALES
+                                (ESCOM)
+                            </option>
+                            <option value="ING. GEOLÓGICA (ESIA TICOMÁN)">ING. GEOLÓGICA (ESIA TICOMÁN)</option>
+                            <option value="ING. GEOFÍSICA (ESIA TICOMÁN)">ING. GEOFÍSICA (ESIA TICOMÁN)</option>
+                            <option value="ING. PETROLERA (ESIA TICOMÁN)">ING. PETROLERA (ESIA TICOMÁN)</option>
+                            <option value="ING. TOPOGRÁFICA Y FOTOGAMÉTRICA (ESIA TICOMÁN)">ING. TOPOGRÁFICA Y
+                                FOTOGAMÉTRICA (ESIA TICOMÁN)
+                            </option>
+                            <option value="ING. MATEMÁTICA (ESFM)">ING. MATEMÁTICA (ESFM)</option>
+                            <option value="LIC. EN FÍSICA Y MATEMÁTICAS (ESFM)">ING. EN FÍSICA Y MATEMÁTICAS (ESFM)
+                            </option>
+                            <option value="ING. CIVIL (ESIA ZACATENCO)">ING. CIVIL (ESIA ZACATENCO)</option>
+                            <option value="ING. MECÁNICA (ESIME AZCAPOTZALCO)">ING. MECÁNICA (ESIME AZCAPOTZALCO)
+                            </option>
+                            <option value="ING. ROBÓTICA INDUSTRIAL (ESIME AZCAPOTZALCO)">ING. ROBÓTICA INDUSTRIAL
+                                (ESIME AZCAPOTZALCO)
+                            </option>
+                            <option value="ING. SISTEMAS AUTOMOTRICES (ESIME AZCAPOTZALCO)">ING. SISTEMAS AUTOMOTRICES
+                                (ESIME AZCAPOTZALCO)
+                            </option>
+                            <option value="ING. BIOTECNOLÓGICA (UPIBI)">ING. BIOTECNOLÓGICA (UPIBI)</option>
+                            <option value="ING. ALIMENTOS (UPIBI)">ING. ALIMENTOS (UPIBI)</option>
+                            <option value="ING. BIOMÉDICA (UPIBI)">ING. BIOMÉDICA (UPIBI)</option>
+                            <option value="ING. AMBIENTAL (UPIBI)">ING. AMBIENTAL (UPIBI)</option>
+                            <option value="ING. FARMACÉUTICA (UPIBI)">ING. FARMACÉUTICA (UPIBI)</option>
+                            <option value="ING. SISTEMAS AUTOMOTRICES (ESIME CULHUACÁN)">ING. SISTEMAS AUTOMOTRICES
+                                (ESIME CULHUACÁN)
+                            </option>
+                            <option value="ING. COMUNICACIONES Y ELECTRÓNICA (ESIME CULHUACÁN)">ING. COMUNICACIONES Y
+                                ELECTRÓNICA (ESIME CULHUACÁN)
+                            </option>
+                            <option value="ING. MECÁNICA (ESIME CULHUACÁN)">ING. MECÁNICA (ESIME CULHUACÁN)</option>
+                            <option value="ING. COMPUTACIÓN (ESIME CULHUACÁN)">ING. COMPUTACIÓN (ESIME CULHUACÁN)
+                            </option>
+                            <option value="ING. MECATRÓNICA (UPIIZ)">ING. MECATRÓNICA (UPIIZ)</option>
+                            <option value="ING. ALIMENTOS (UPIIZ)">ING. ALIMENTOS (UPIIZ)</option>
+                            <option value="ING. SISTEMAS COMPUTACIONALES (UPIIZ)">ING. SISTEMAS COMPUTACIONALES
+                                (UPIIZ)
+                            </option>
+                            <option value="ING. AMBIENTAL (UPIIZ)">ING. AMBIENTAL (UPIIZ)</option>
+                            <option value="ING. SISTEMAS AUTOMOTRICES (ESIME TICOMÁN)">ING. SISTEMAS AUTOMOTRICES (ESIME
+                                TICOMÁN)
+                            </option>
+                            <option value="LIC. ADMINISTRACIÓN INDUSTRIAL (UPIICSA)">ING. ADMINISTRACIÓN INDUSTRIAL
+                                (UPIICSA)
+                            </option>
+                            <option value="LIC. CIENCIAS DE LA INFORMÁTICA (UPIICSA)">ING. CIENCIAS DE LA INFORMÁTICA
+                                (UPIICSA)
+                            </option>
+                            <option value="ING. INFORMÁTICA (UPIICSA)">ING. INFORMÁTICA (UPIICSA)</option>
+                            <option value="ING. TRANSPORTE (UPIICSA)">ING. TRANSPORTE (UPIICSA)</option>
+                            <option value="ING. INDUSTRIAL (UPIICSA)">ING. INDUSTRIAL (UPIICSA)</option>
+                            <option value="ING. COMUNICACIONES Y ELECTRÓNICA (ESIME ZACATENCO)">ING. COMUNICACIONES Y
+                                ELECTRÓNICA (ESIME ZACATENCO)
+                            </option>
+                            <option value="ING. CONTROL Y AUTOMATIZACIÓN (ESIME ZACATENCO)">ING. CONTROL Y
+                                AUTOMATIZACIÓN (ESIME ZACATENCO)
+                            </option>
+                            <option value="ING. ELÉCTRICA (ESIME ZACATENCO)">ING. ELÉCTRICA (ESIME ZACATENCO)</option>
+                            <option value="ING. SISTEMAS AUTOMOTRICES (ESIME ZACATENCO)">ING. SISTEMAS AUTOMOTRICES
+                                (ESIME ZACATENCO)
+                            </option>
+                            <option value="ING. FARMACÉUTICA (UPIIG)">ING. FARMACÉUTICA (UPIIG)</option>
+                            <option value="ING. BIOTECNOLOGÍA (UPIIG)">ING. BIOTECNOLOGÍA (UPIIG)</option>
+                            <option value="ING. SISTEMAS AUTOMOTRICES (UPIIG)">ING. SISTEMAS AUTOMOTRICES (UPIIG)
+                            </option>
+                            <option value="ING. AERONÁUTICA (UPIIG)">ING. AERONÁUTICA (UPIIG)</option>
+                            <option value="ING. METALURGIA Y MATERIALES (ESIQUIE)">ING. METALURGIA Y MATERIALES
+                                (ESIQUIE)
+                            </option>
+                            <option value="ING. QUÍMICA INDUSTRIAL(ESIQUIE)">ING. QUÍMICA INDUSTRIAL(ESIQUIE)</option>
+                            <option value="ING. QUÍMICA PETROLERA (ESIQUIE)">ING. QUÍMICA PETROLERA (ESIQUIE)</option>
+                            <option value="ING. TELEMÁTICA (UPIITA)">ING. TELEMÁTICA (UPIITA)</option>
+                            <option value="ING. MECATRÓNICA (UPIITA)">ING. MECATRÓNICA (UPIITA)</option>
+                            <option value="ING. BIÓNICA (UPIITA)">ING. BIÓNICA (UPIITA)</option>
+                            <option value="ING. TEXTIL (ESIT)">ING. TEXTIL (ESIT)</option>
+                            <option value="ING. ARQUITECTO (ESIA TECAMACHALCO)">ING. ARQUITECTO (ESIA TECAMACHALCO)
+                            </option>
+                            <option value="ING. SISTEMAS AUTOMOTRICES (UPIIH)">ING. SISTEMAS AUTOMOTRICES (UPIIH)
+                            </option>
+                            <option value="ING. MECATRÓNICA (UPIIH)">ING. MECATRÓNICA (UPIIH)</option>
+                            <option value="LIC. ENFERMERÍA (CICS MILPA ALTA)">LIC. ENFERMERÍA (CICS MILPA ALTA)</option>
+                            <option value="MÉDICO CIRUJANO Y PARTERO (CICS MILPA ALTA)">MÉDICO CIRUJANO Y PARTERO (CICS
+                                MILPA ALTA)
+                            </option>
+                            <option value="LIC. NUTRICIÓN (CICS MILPA ALTA)">LIC. NUTRICIÓN (CICS MILPA ALTA)</option>
+                            <option value="LIC. ODONTOLOGÍA (CICS MILPA ALTA)">LIC. ODONTOLOGÍA (CICS MILPA ALTA)
+                            </option>
+                            <option value="LIC. OPTOMETRÍA (CICS MILPA ALTA)">LIC. OPTOMETRÍA (CICS MILPA ALTA)</option>
+                            <option value="LIC. TRABAJO SOCIAL (CICS MILPA ALTA)">LIC. TRABAJO SOCIAL (CICS MILPA
+                                ALTA)
+                            </option>
+                            <option value="MÉDICO CIRUJANO Y HOMEÓPATA (ENMyH)">LIC. CIRUJANO Y HOMEÓPATA (ENMyH)
+                            </option>
+                            <option value="MÉDICO CIRUJANO Y PARTERO (ENMyH)">LIC. CIRUJANO Y PARTERO (ENMyH)</option>
+                            <option value="LIC. ODONTOLOGÍA (CICS SANTO TOMÁS)">LIC. ODONTOLOGÍA (CICS SANTO TOMÁS)
+                            </option>
+                            <option value="LIC. OPTOMETRÍA (CICS SANTO TOMÁS)">LIC. OPTOMETRÍA (CICS SANTO TOMÁS)
+                            </option>
+                            <option value="LIC. PSICOLOGÍA (CICS SANTO TOMÁS)">LIC. PSICOLOGÍA (CICS SANTO TOMÁS)
+                            </option>
+                            <option value="LIC. ENFERMERÍA Y OBSTETRICIA (ESEO)">LIC. ENFERMERÍA Y OBSTETRICIA (ESEO)
+                            </option>
+                            <option value="LIC. ENFERMERÍA (ESEO)">LIC. ENFERMERÍA Y OBSTETRICIA (ESEO)</option>
+                            <option value="BIÓLOGO (ENCB)">LIC. BIÓLOGO (ENCB)</option>
+                            <option value="ING. BIOQUÍMICA (ENCB)">ING. BIOQUÍMICA (ENCB)</option>
+                            <option value="ING. SISTEMAS AMBIENTALES (ENCB)">ING. SISTEMAS AMBIENTALES (ENCB)</option>
+                            <option value="QUÍMICO BACTERIÓLOGO PARASITÓLOGO (ENCB)">QUÍMICO BACTERIÓLOGO PARASITÓLOGO
+                                (ENCB)
+                            </option>
+                            <option value="QUÍMICO FARMACÉUTICO INDUSTRIAL (ENCB)">QUÍMICO FARMACÉUTICO INDUSTRIAL
+                                (ENCB)
+                            </option>
+                            <option value="MÉDICO CIRUJANO Y PARTERO (ESM)">MÉDICO CIRUJANO Y PARTERO (ESM)</option>
+                            <option value="CONTADOR PÚBLICO (ESCA SANTO TOMÁS)">CONTADOR PÚBLICO (ESCA SANTO TOMÁS)
+                            </option>
+                            <option value="LIC. RELACIONES COMERCIALES (ESCA SANTO TOMÁS)">LIC. RELACIONES COMERCIALES
+                                (ESCA SANTO TOMÁS)
+                            </option>
+                            <option value="LIC. COMERCIO INTERNACIONAL (ESCA SANTO TOMÁS)">LIC. COMERCIO INTERNACIONAL
+                                (ESCA SANTO TOMÁS)
+                            </option>
+                            <option value="LIC. ECONOMÍA (ESE)">LIC. ECONOMÍA (ESE)</option>
+                            <option value="CONTADOR PÚBLICO (ESCA TEPEPAN)">CONTADOR PÚBLICO (ESCA TEPEPAN)</option>
+                            <option value="LIC. RELACIONES COMERCIALES (ESCA TEPEPAN)">LIC. RELACIONES COMERCIALES (ESCA
+                                TEPEPAN)
+                            </option>
+                            <option value="LIC. NEGOCIOS INTERNACIONALES (ESCA TEPEPAN)">LIC. NEGOCIOS INTERNACIONALES
+                                (ESCA TEPEPAN)
+                            </option>
+                            <option value="LIC. TURISMO (EST)">LIC. TURISMO (EST)</option>
+
+                        </select>
+
+                        <label>Primera Opción Seleccionada</label>
+
+                    </div>
+
+                </fieldset>
+
+                <div class="file-field input-field">
+
+                    <div class="btn">
+
+                        <span>Foto</span>
+                        <input name="foto" type="file">
+
+                    </div>
+
+                    <div class="file-path-wrapper">
+
+                        <input class="file-path validate" type="text" placeholder="Selecciona una foto tuya">
+
+                    </div>
+
+                </div>
+
+                <div class="row center">
+
+                    <button class="btn-large waves-effect waves-light" type="reset" name="submit">Vacíar Formulario
+                    </button>
+
+                    <button class="btn-large waves-effect waves-light" type="submit" name="submit">Aceptar</button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+<footer class="page-footer">
+
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="left col s12">
+
+                <p><strong>Proyecto:</strong> Sistema de Registro para Alumnos de Nuevo Ingreso.</p>
+                <p><strong>Materia:</strong> Tecnologías para la WEB.</p>
+                <p><strong>Alumnos:</strong> Alexander López Cedillo, Omar Rojas Espinoza.</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="footer-copyright">
+
+        <div class="container">
+
+            <div class="center row">
+
+                <div class="col s12">
+
+                    © 2018 ESCOM-IPN
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+</body>
+
+<script src="./js/jquery-3.3.1.min.js" type="text/javascript"></script>
+<script src="./js/materialize.min.js" type="text/javascript"></script>
+
+<script>
+
+    $(document).ready(function () {
+        $(".button-collapse").sideNav();
+
+        $('select').material_select();
+
+        $(".datepicker").pickadate({
+            selectMonths: true, // Creates a dropdown to control month
+            selectYears: 100, // Creates a dropdown of 15 years to control year
+            closeOnSelect: false // Close upon selecting a date
+        });
+
+    });
+
+</script>
+
+</html>
