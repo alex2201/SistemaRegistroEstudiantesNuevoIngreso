@@ -26,4 +26,3 @@ $email = $_POST["email"];
 $previous_school = $_POST["previous_school"];
 $average = $_POST["average"];
 $option = $_POST["option"];
-$photo = $_FILES["photo"]["name"];

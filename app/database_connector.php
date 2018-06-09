@@ -13,8 +13,8 @@ $database = "sistema_registro";
 
 $conn = new mysqli($host, $user, $pass, $database);
 
-//$con = mysqli_connect($host, $user, $pass, $database);
-
 if ($conn->connect_error) {
     die('Could not connect: ' . $conn->connect_error);
+} else {
+    $conn->set_charset("utf8");
 }

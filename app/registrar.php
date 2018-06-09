@@ -6,15 +6,30 @@
  * Time: 06:57 PM
  */
 
+header("Content-Type: text/html;charset=utf-8");
 require "./database_connector.php";
 require "collect_form_data.php";
 
+// Save photo file.
+
+$path = "../users_data/".$ref."/";
+
+if (!file_exists($path)) {
+    mkdir($path, 0777, true);
+}
+
+$info = pathinfo($_FILES['photo']['name']);
+$ext = $info['extension']; // get the extension of the file
+$file_name = "picture." . $ext;
+$target = $path.$file_name;
+
+$OK = move_uploaded_file($_FILES['photo']['tmp_name'], $target);
+
 $sql = "insert into alumno values(
-    default,
+    $ref,
     \"$first_name\",
     \"$last_name\",
     \"$second_last_name\",
-    $ref,
     \"2017-04-22\",
     $born_state,
     $gender,
@@ -31,19 +46,21 @@ $sql = "insert into alumno values(
     \"$previous_school\",
     $average,
     $option,
-    \"$photo\"
+    \"$target\"
 )";
 
 if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully";
+    echo "New record created successfully: ".$OK;
 } else {
     echo "Error: " . $conn->error;
+    unlink($target);
+    rmdir($path);
 }
 
 $conn->close();
 //$row = $result->fetch_array();
 
-//echo $row['nombre']." ".$row['ap_paterno'];
+echo $first_name." ".$last_name;
 
 //echo "<p> $ref</p>";
 //echo "\n";
